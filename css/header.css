@@ -1,0 +1,187 @@
+/* header */
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  min-width: 1024px;
+  z-index: 100;
+}
+.header-nav { 
+  height: .6rem /* 116/192 */;
+  line-height:  .6rem /* 116/192 */;
+  margin-right: .78rem /* 150/192 */;
+}
+.header-nav li{
+  float: left;
+  margin-left: .39rem /* 75/192 */;
+}
+.header-nav li:first-child{
+  margin-left: 0;
+}
+.header-nav li a{
+  font-size: .11rem /* 22/192 */;
+  color: #fff;
+}
+.logo {
+  padding: .1rem /* 20/192 */;
+  margin-left: .85rem /* 164/192 */;
+}
+.logo img{
+  width: 1.35rem /* 260/192 */;
+  height: .4rem /* 77/192 */;
+}
+.header-nav li.active a{
+  border-bottom: 2px solid #fc0200;
+  padding-bottom: .01rem /* 2/192 */;
+}
+/* back_top */
+.back_top {
+  position: fixed;
+  top: 50%;
+  right: .13rem /* 25/192 */;
+  z-index: 100;
+  display: none;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.back_top li {
+  margin-bottom: .1rem /* 20/192 */;
+  cursor: pointer;
+}
+.back_top .back_top_icon{
+  width: .24rem /* 47/192 */;
+  height: .24rem /* 47/192 */;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.back_top li:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.back_top li:nth-child(2) {
+  margin-top: .34rem /* 65/192 */
+}
+.back_top >li:first-child .telephone_top {
+  opacity: 0;
+  width: .24rem /* 47/192 */;
+  height: .24rem /* 47/192 */;
+  background-color: #e83f59;
+  border-radius: .16rem /* 30/192 */;
+  line-height: .24rem /* 47/192 */;
+  text-align: center;
+  color: #fff;
+  font-size: .11rem /* 22/192 */;
+  transition: width .3s;
+  overflow: hidden;
+}
+.back_top >li:first-child:hover .telephone_top {
+  opacity: 1;
+  width: 1.04rem /* 200/192 */;
+}
+.back_top >li:first-child:hover .back_top_icon {
+  display: none;
+}
+.back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/index/fubiao1.png);
+}
+.back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/index/fubiao2.png);
+}
+.back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/index/fubiao3.png);
+}
+.back_top li:last-child .back_top_icon{
+  background-image: url(../img/index/fubiao4.png);
+}
+/* contactUs */
+#contactUs .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/contactUs/1_04.png);
+}
+#contactUs .back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/contactUs/1_07.png);
+}
+#contactUs .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/contactUs/1_09.png);
+}
+#contactUs .back_top li:last-child .back_top_icon{
+  background-image: url(../img/contactUs/1_11.png);
+}
+#contactUs .telephone_top {
+  background-color: #d38a61;
+}
+/* ecommerceLive */
+#ecommerceLive .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/ecommerceLive/1_3.png);
+}
+#ecommerceLive .back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/ecommerceLive/1_4.png);
+}
+#ecommerceLive .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/ecommerceLive/1_5.png);
+}
+#ecommerceLive .back_top li:last-child .back_top_icon{
+  background-image: url(../img/ecommerceLive/1_6.png);
+}
+#ecommerceLive .telephone_top {
+  background-color: #a2c7fe;
+}
+/* ecomOperate */
+#ecomOperate .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/ecomOperate/5_03.png);
+}
+#ecomOperate .back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/ecomOperate/5_06.png);
+}
+#ecomOperate .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/ecomOperate/5_08.png);
+}
+#ecomOperate .back_top li:last-child .back_top_icon{
+  background-image: url(../img/ecomOperate/5_10.png);
+}
+#ecomOperate .telephone_top {
+  background-color: #46b4ff;
+}
+/* tiktokOperate */
+#tiktokOperate .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/tiktokOperate/fubiao1.png);
+}
+#tiktokOperate .back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/tiktokOperate/fubiao2.png);
+}
+#tiktokOperate .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/tiktokOperate/fubiao3.png);
+}
+#tiktokOperate .back_top li:last-child .back_top_icon{
+  background-image: url(../img/tiktokOperate/fubiao4.png);
+}
+#tiktokOperate .telephone_top {
+  background-color: #ff2f56;
+}
+/* tiktokTrain */
+#tiktokTrain .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/tiktokTrain/1_7.png);
+}
+#tiktokTrain .back_top li:nth-child(2) .back_top_icon{
+  background-image: url(../img/tiktokTrain/1_8.png);
+}
+#tiktokTrain .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/tiktokTrain/1_9.png);
+}
+#tiktokTrain .back_top li:last-child .back_top_icon{
+  background-image: url(../img/tiktokTrain/1_10.png);
+}
+#tiktokTrain .telephone_top {
+  background-color: #ffe777;
+}

@@ -1,0 +1,67 @@
+/* footer */
+.footer {
+  background-color: #000;
+  color: #949494;
+  font-size: .08rem /* 16/192 */;
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: center;
+  padding: .42rem /* 80/192 */;
+  box-sizing: content-box;
+}
+.footer ul {
+  margin-right: .78rem /* 150/192 */;
+}
+.footer ul li{
+  margin-bottom: .09rem /* 18/192 */;
+}
+.footer ul :last-child{
+  margin-bottom: 0;
+}
+.footer ul li a{
+  color: #949494;
+}
+.footer .erweima {
+  text-align: center;
+}
+.footer .erweima p {
+  margin-top: .05rem /* 10/192 */;
+}
+.footer .erweima img {
+  width: .48rem /* 92/192 */;
+  height: .48rem /* 93/192 */;
+}
+.footer .erweima p:nth-child(2) {
+  font-size: .07rem /* 14/192 */;
+}
+.footer .line{
+  height: .81rem /* 155/192 */;
+  width: .01rem /* 2/192 */;
+  background-color: #949494;
+  margin: 0 .36rem /* 70/192 */;
+}
+.footer .telephone{
+  text-align: center;
+}
+.footer .telephone p:first-child{
+  font-size: .21rem /* 40/192 */;
+  color: #ff3366;
+  font-weight: bold;
+  font-style: oblique;
+}
+.footer .telephone a{
+  display: inline-block;
+  width: 1.68rem /* 322/192 */;
+  height: .22rem /* 42/192 */;
+  background: url(../img/index/kuang.png) no-repeat;
+  background-size: contain;
+  line-height: .22rem /* 42/192 */;
+  font-size: .11rem /* 22/192 */;
+  color: #fff;
+  cursor: pointer;
+  margin: .09rem /* 18/192 */ 0;
+}
+.footer .telephone p:last-child{
+  color: #fff;
+  font-size: .11rem /* 22/192 */;
+}

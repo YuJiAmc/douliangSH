@@ -1,0 +1,50 @@
+body,ul,li,ol,dl,dd,h1,h2,h3,h4,h5,h6,input,p { 
+  margin:0;
+}
+ul,ol {
+  padding:0;
+}
+.clear:after {
+  display:block;
+  content:"";
+  clear:both; 
+  visibility:hidden; 
+  height:0;
+}
+.clear {
+  zoom:1;
+}
+a {
+  text-decoration:none;
+}
+li {
+  list-style:none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+html {
+  min-width: 1024px;
+}
+body {
+  font-family: "微软雅黑";
+  font-size: 12px;
+}
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table;
+}
+.clearfix:after {
+  clear:both;
+  overflow:hidden;
+}
+.clearfix {
+  zoom:1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}

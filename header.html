@@ -1,0 +1,61 @@
+<!-- header -->
+<div class="header clearfix">
+  <a href="/" class="logo fl">
+    <img src="./img/index/logo.png" alt="logo">
+  </a>
+  <ul class="header-nav fr">
+    <li>
+      <a href="/">首页</a>
+    </li>
+    <li>
+      <a href="/tiktokOperate.html">抖音运营</a>
+    </li>
+    <li>
+      <a href="/ecommerceLive.html">电商直播</a>
+    </li>
+    <li>
+      <a href="/tiktokTrain.html">抖音培训</a>
+    </li>
+    <li>
+      <a href="/ecomOperate.html">电商运营</a>
+    </li>
+    <li>
+      <a href="/contactUs.html">联系我们</a>
+    </li>
+  </ul>
+</div>
+<!-- back_top -->
+<ul class="back_top">
+  <li>
+    <div class="back_top_icon"></div>
+    <div class="telephone_top">19901638825</div>
+  </li>
+  <li>
+    <a
+    class="back_top_icon"
+    target="_blank"
+    href="http://wpa.qq.com/msgrd?v=3&uin=2885834575&site=qq&menu=yes"
+    ></a>
+  </li>
+  <li>
+    <a href="#contact_anchor">
+      <div class="back_top_icon"></div>
+    </a>
+  </li>
+  <li>
+    <div class="back_top_icon"></div>
+  </li>
+</ul>
+<script src="./js/jquery-1.12.4.js"></script>
+<script>
+  $(document).ready(function() {
+      $(".header-nav li a").each(function(){
+          if($(this)[0].href == String(window.location)) {
+              $(this).parent("li").addClass("active").siblings().removeClass("active");
+          }
+      });
+  });
+  $('.back_top li:last-child').click(function() {
+      $('body,html').animate({scrollTop:0},500);
+   })
+</script>
