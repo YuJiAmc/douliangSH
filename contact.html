@@ -34,6 +34,16 @@
 </div>
 <script src="./js/jquery-1.12.4.js"></script>
 <script>
+  var type = $("#contact").parent()[0].id;
+  var map = {
+    tiktokTrain: "抖音培训",
+    tiktokOperate: "抖音运营",
+    ecommerceLive: "电商直播",
+    contactUs: "联系我们",
+    ecomOperate: "电商运营",
+  }
+  var dataName = map[type] || "首页";
+  console.log();
   $(".form_btn").click(function(){
     var name = $("#name").val();
     var phone = $("#phone").val()
@@ -50,7 +60,7 @@
     	type: 'post',
     	url: 'http://info.wkefu.com/api/activity2018/messageBox',
     	data: {
-    		'name': name,
+    		'name': name+" (来源页面: "+dataName+")",
     		'phone': phone,
     		'note': message,
         "source": 3,
