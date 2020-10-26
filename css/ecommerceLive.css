@@ -235,12 +235,15 @@
   width: 5.23rem /* 1005/192 */;
   height: 2.5rem /* 480/192 */;
 }
-.type .type_content span{
+.type .type_content a{
+  height: .19rem /* 36/192 */;
+  width: 1.14rem /* 218/192 */;
   font-size: .1rem /* 20/192 */;
   color: #fff;
   position: absolute;
-  bottom: .48rem /* 92/192 */;
-  right: 1.04rem /* 200/192 */;
+  bottom: .45rem /* 86/192 */;
+  right: .66rem /* 127/192 */;
+  line-height: .19rem /* 36/192 */;
 }
 /* cases */
 .cases {
