@@ -16,7 +16,9 @@
   </script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/common.js"></script>
+<script>
+  document.write('<script src="/js/common.js?v=' + new Date().getTime() + '"><\/script>')
+</script>
 <body class="compress_bgi" style="background-image: url(./img/ecommerceLive/ditu_02_min.jpg); background-repeat:no-repeat; background-position: center;background-attachment:fixed; background-size: cover;">
   <div id="ecommerceLive">
     <!-- header -->
@@ -188,18 +190,3 @@
   </div>
 </body>
 </html>
-<script>
-  $(function(){
-   var test = /_min\./
-   $(".compress_img").each(function(){	
-     var reSrc = $(this).attr("src").replace(test,".");
-     $(this).attr("src",reSrc)
-   })
-   var img=new Image();
-   var src= "./img/ecommerceLive/ditu_02.jpg"
-   img.src= src;
-   img.onload=function(){
-     $(".compress_bgi").css("background-image","url('"+src+"')")
-   };
- })
-</script>

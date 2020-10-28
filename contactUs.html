@@ -16,7 +16,9 @@
   </script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/common.js"></script>
+<script>
+  document.write('<script src="/js/common.js?v=' + new Date().getTime() + '"><\/script>')
+</script>
 <body>
   <div id="contactUs">
     <!-- header -->
@@ -117,12 +119,3 @@
   </div>
 </body>
 </html>
-<script>
-   $(function(){
-    var test = /_min\./
-    $(".compress_img").each(function(){	
-      var reSrc = $(this).attr("src").replace(test,".");
-      $(this).attr("src",reSrc)
-    })
-  })
-</script>

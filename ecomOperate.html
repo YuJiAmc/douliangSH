@@ -16,7 +16,9 @@
   </script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/common.js"></script>
+<script>
+  document.write('<script src="/js/common.js?v=' + new Date().getTime() + '"><\/script>')
+</script>
 <body>
   <div id="ecomOperate">
     <!-- header -->
@@ -83,7 +85,7 @@
         </ul>
       </div>
     </div>
-    <div class="satisfy">
+    <div class="satisfy compress_bgi">
       <img src="./img/ecomOperate/1_05.png" alt="">
       <div class="public_title">
         <p>How can we satisfy you</p>
@@ -281,7 +283,7 @@
       </ul>
     </div>
     <!-- team -->
-    <div class="team">
+    <div class="team compress_bgi">
       <img src="./img/ecomOperate/1_05.png" alt="">
       <div class="public_title">
         <p>Our team</p>
@@ -348,7 +350,7 @@
       </ul>
     </div>
     <!-- example -->
-    <div class="example">
+    <div class="example compress_bgi">
       <img src="./img/ecomOperate/1_05.png" alt="">
       <div class="public_title">
         <p>店铺运营实例</p>
@@ -395,30 +397,3 @@
     <div id="foot"></div>
 </body>
 </html>
-<script>
-  $(function(){
-   var test = /_min\./
-   $(".compress_img").each(function(){	
-     var reSrc = $(this).attr("src").replace(test,".");
-     $(this).attr("src",reSrc)
-   })
-   var img=new Image();
-   var src= "./img/ecomOperate/ditu_05.jpg"
-   img.src= src;
-   img.onload=function(){
-     $(".team").css("background-image","url('"+src+"')")
-   };
-   var img2=new Image();
-   var src2= "./img/ecomOperate/ditu_02.jpg"
-   img2.src= src2;
-   img2.onload=function(){
-     $(".satisfy").css("background-image","url('"+src2+"')")
-   };
-   var img3=new Image();
-   var src3= "./img/ecomOperate/ditu_07.jpg"
-   img3.src= src3;
-   img3.onload=function(){
-     $(".example").css("background-image","url('"+src3+"')")
-   };
- })
-</script>

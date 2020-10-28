@@ -17,7 +17,9 @@
   </script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/common.js"></script>
+<script>
+  document.write('<script src="/js/common.js?v=' + new Date().getTime() + '"><\/script>')
+</script>
 <body class="compress_bgi" style="background-image: url(./img/index/ditu_min.jpg); background-repeat:no-repeat; background-position: center;background-attachment:fixed; background-size: cover;">
   <!-- head -->
   <div class="header clearfix">
@@ -53,7 +55,7 @@
     <img  style="width: 100%;" src="./img/index/biaoyu.png" alt="">
   </div>
   <ul class="process clearfix">
-    <li>
+    <li class="compress_bgi">
       <div class="bg_mask"></div>
       <div class="process_des">
         <div>01</div>
@@ -72,7 +74,7 @@
         </div>
       </div>
     </li>
-    <li>
+    <li class="compress_bgi">
       <div class="bg_mask"></div>
       <div class="process_des">
         <div>02</div>
@@ -92,7 +94,7 @@
         </div>
       </div>
     </li>
-    <li>
+    <li class="compress_bgi">
       <div class="bg_mask"></div>
       <div class="process_des">
         <div>03</div>
@@ -112,7 +114,7 @@
         </div>
       </div>
     </li>
-    <li>
+    <li class="compress_bgi">
       <div class="bg_mask"></div>
       <div class="process_des">
         <div>04</div>
@@ -284,42 +286,3 @@
   </script>
 </body>
 </html>
-<script>
-  $(function(){
-   var test = /_min\./
-   $(".compress_img").each(function(){	
-     var reSrc = $(this).attr("src").replace(test,".");
-     $(this).attr("src",reSrc)
-   })
-   var img=new Image();
-   var src= "./img/index/ditu.jpg"
-   img.src= src;
-   img.onload=function(){
-     $(".compress_bgi").css("background-image","url('"+src+"')")
-   };
-   var img2=new Image();
-   var src2= "./img/index/2_03.jpg"
-   img2.src= src2;
-   img2.onload=function(){
-     $(".process li:nth-child(1)").css("background-image","url('"+src2+"')")
-   };
-   var img3=new Image();
-   var src3= "./img/index/2_04.jpg"
-   img3.src= src3;
-   img3.onload=function(){
-     $(".process li:nth-child(2)").css("background-image","url('"+src3+"')")
-   };
-   var img4=new Image();
-   var src4= "./img/index/1_03.png"
-   img4.src= src4;
-   img4.onload=function(){
-     $(".process li:nth-child(3)").css("background-image","url('"+src4+"')")
-   };
-   var img5=new Image();
-   var src5= "./img/index/2_06.jpg"
-   img5.src= src5;
-   img5.onload=function(){
-     $(".process li:nth-child(4)").css("background-image","url('"+src5+"')")
-   };
- })
-</script>

@@ -16,7 +16,9 @@
   </script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
-<script src="./js/common.js"></script>
+<script>
+  document.write('<script src="/js/common.js?v=' + new Date().getTime() + '"><\/script>')
+</script>
 <body>
   <div id="tiktokTrain">
     <!-- head -->
@@ -51,7 +53,7 @@
       <img id="banner" class="compress_img" style="width: 100%;" src="./img/tiktokTrain/banner_01_min.jpg" alt="">
     </div>
     <!-- scope -->
-    <div class="scope clearfix">
+    <div class="scope compress_bgi clearfix">
       <div class="scope_l">
         <div class="scope_l_column">
           <div class="scope_l_content">
@@ -134,7 +136,7 @@
       </div>
     </div>
     <!-- need -->
-    <div class="need clearfix">
+    <div class="need compress_bgi clearfix">
       <img src="./img/tiktokTrain/1_1.png" alt="">
       <div class="need_l"> 
         <div class="scope_l_column">
@@ -205,7 +207,7 @@
       </div>
     </div>
     <!--  satisfy  -->
-    <div class="satisfy">
+    <div class="satisfy compress_bgi">
       <img src="./img/tiktokTrain/1_1.png" alt="">
       <div class="public_title">
         <p>How can we satisfy you</p>
@@ -290,30 +292,3 @@
   </div>
 </body>
 </html>
-<script>
-   $(function(){
-    var test = /_min\./
-    $(".compress_img").each(function(){	
-      var reSrc = $(this).attr("src").replace(test,".");
-      $(this).attr("src",reSrc)
-    })
-    var img=new Image();
-    var src= "./img/tiktokTrain/ditu_04.jpg"
-    img.src= src;
-    img.onload=function(){
-      $(".satisfy").css("background-image","url('"+src+"')")
-    };
-    var img2=new Image();
-    var src2= "./img/tiktokTrain/ditu_02.jpg"
-    img2.src= src2;
-    img2.onload=function(){
-      $(".scope").css("background-image","url('"+src2+"')")
-    };
-    var img3=new Image();
-    var src3= "./img/tiktokTrain/ditu_03.jpg"
-    img3.src= src3;
-    img3.onload=function(){
-      $(".need").css("background-image","url('"+src3+"')")
-    };
-  })
-</script>
