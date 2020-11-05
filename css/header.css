@@ -101,7 +101,7 @@
   position: absolute;
   transition: all .3s;
   opacity: 0;
-  top: .46rem /* 88/192 */;
+  top: .42rem /* 80/192 */;
   left: .52rem /* 100/192 */;
 }
 .back_top li:nth-child(3) .erweima img{
@@ -115,12 +115,12 @@
 }
 @keyframes move {
   0% {
-    top: .46rem /* 88/192 */;
+    top: .42rem /* 80/192 */;
     left: -.52rem /* 100/192 */;
     opacity: 0;
   }
   100% {
-    top: .46rem /* 88/192 */;
+    top: .42rem /* 80/192 */;
     left: -.89rem /* 170/192 */;
     opacity: 1;
   }
