@@ -3,7 +3,6 @@ $(function(){
   $("#head").load("./header.html?v="+new Date().getTime());
   $("#foot").load("./footer.html?v="+new Date().getTime());
   $("#contact").load("./contact.html?v="+new Date().getTime());
-  // 置顶
   setTimeout(() => {
       $(window).scroll(function () {
           if ($(window).scrollTop() > $("#banner").height()){
