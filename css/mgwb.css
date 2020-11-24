@@ -1,11 +1,11 @@
-.art-design{
+#art-design{
   letter-spacing: .01rem /* 2/192 */;
 }
-.art-design h2 {
+#art-design h2 {
   font-weight: bold;
   font-size: .16rem /* 30/192 */;
 }
-.art-design .w1005 {
+#art-design .w1005 {
   width: 5.26rem /* 1010/192 */;
   margin-left: auto;
   margin-right: auto;
@@ -305,6 +305,7 @@
   text-align: center;
   padding-top: .21rem /* 40/192 */;
   height: 2.86rem /* 550/192 */;
+  background-color: #fbfafa;
 }
 
 #standard h2 {

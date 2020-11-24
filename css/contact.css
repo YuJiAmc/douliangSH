@@ -10,8 +10,14 @@
 #contactUs .contact{
   padding: 0;
 }
+#mgwb .contact{
+  padding-top: .42rem /* 80/192 */;
+}
 #contactUs .contact .contact_title p:first-child{
   color: #d38a61;
+}
+#mgwb .contact .contact_title p:first-child{
+  color: #ffa103;
 }
 .contact .contact_title p:first-child{
   font-size: .29rem /* 55/192 */;
@@ -22,6 +28,11 @@
   margin: .05rem /* 10/192 */ 0;
 }
 #contactUs .contact .contact_title p:nth-child(2){
+  color: #333;
+  font-size: .16rem /* 30/192 */;
+  margin: .1rem /* 20/192 */ 0;
+}
+#mgwb .contact .contact_title p:nth-child(2){
   color: #333;
   font-size: .16rem /* 30/192 */;
   margin: .1rem /* 20/192 */ 0;
@@ -88,12 +99,30 @@
   height: .19rem /* 37/192 */;
   background-image: url(../img/contactUs/1_35.png);
 }
+#mgwb .form_label .name_img{
+  width: .19rem /* 36/192 */;
+  height: .19rem /* 37/192 */;
+  background-image: url(../img/mgwb/22.png);
+}
+#mgwb .form_label .phone_img{
+  width: .15rem /* 28/192 */;
+  height: .21rem /* 41/192 */;
+  background-image: url(../img/mgwb/11.png);
+}
+#mgwb .form_label .message_img{
+  width: .19rem /* 37/192 */;
+  height: .19rem /* 37/192 */;
+  background-image: url(../img/mgwb/33.png);
+}
 .form_label {
   display: inline-block;
   text-align: left;
 }
 #contactUs .form_label {
   color: #d38a61;
+}
+#mgwb .form_label {
+  color: #ffa103;
 }
 .form_label:first-child {
   margin-right: .31rem /* 60/192 */;
@@ -115,7 +144,13 @@
   border: 1px solid #6e6e6e;
   outline: none;; 
   border-radius: .03rem /* 5/192 */;
-  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .2);
+  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
+}
+#mgwb .form_label textarea {
+  border: 1px solid #6e6e6e;
+  outline: none;; 
+  border-radius: .03rem /* 5/192 */;
+  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
 }
 .contact_form .form_btn{
   width: 2.34rem /* 450/192 */;
@@ -143,7 +178,12 @@
 #contactUs .form_label input {
   border: 1px solid #6e6e6e;
   outline: none;; 
-  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .2);
+  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
+}
+#mgwb .form_label input {
+  border: 1px solid #6e6e6e;
+  outline: none;; 
+  box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
 }
 .form_label >div {
   margin-bottom: .08rem /* 15/192 */;
@@ -168,8 +208,14 @@
   background: url(../img/contactUs/1_38.png) no-repeat;
   background-size: contain;
 }
+#mgwb .form_btn{
+  background: url(../img/mgwb/4.png) no-repeat;
+  background-size: contain;
+}
 #contactUs .form_btn span{
   display: none;
 }
-
-
+#mgwb .form_btn {
+  height: .3rem /* 58/192 */;
+  line-height: .3rem /* 58/192 */;
+}
