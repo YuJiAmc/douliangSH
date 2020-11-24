@@ -101,7 +101,7 @@
   position: absolute;
   transition: all .3s;
   opacity: 0;
-  top: .42rem /* 80/192 */;
+  top: .1rem /* 20/192 */;
   left: .52rem /* 100/192 */;
 }
 .back_top li:nth-child(3) .erweima img{
@@ -115,12 +115,12 @@
 }
 @keyframes move {
   0% {
-    top: .42rem /* 80/192 */;
+    top: .1rem /* 20/192 */;
     left: -.52rem /* 100/192 */;
     opacity: 0;
   }
   100% {
-    top: .42rem /* 80/192 */;
+    top: .1rem /* 20/192 */;
     left: -.89rem /* 170/192 */;
     opacity: 1;
   }
@@ -230,4 +230,28 @@
 }
 #tiktokTrain .back_top li:nth-child(3) .back_top_icon{
   background-image: url(../img/index/wc4.png);
+}
+/* mgwb */
+#mgwb .back_top li:first-child .back_top_icon{
+  position: absolute;
+  background-image: url(../img/mgwb/11_03.png);
+}
+#mgwb .back_top li:nth-child(4) .back_top_icon{
+  background-image: url(../img/mgwb/11_10.png);
+  display: none;
+}
+#mgwb .back_top li:last-child .back_top_icon{
+  background-image: url(../img/mgwb/11_12.png);
+}
+#mgwb .telephone_top {
+  background-color: #ffa200;
+}
+#mgwb .back_top li:nth-child(3){
+  margin-bottom: .08rem /* 16/192 */;
+}
+#mgwb .back_top li:nth-child(4){
+  margin-bottom: 0;
+}
+#mgwb .back_top li:nth-child(3) .back_top_icon{
+  background-image: url(../img/mgwb/11_08.png);
 }

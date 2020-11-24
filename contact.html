@@ -10,14 +10,14 @@
           <div class="label_i name_img"></div>
           &nbsp;您的姓名 : <span>*</span>
         </div>
-        <input type="text" id="name">
+        <input type="text" id="name" />
       </div>
       <div class="form_label">
         <div>
           <div class="label_i phone_img"></div>
           &nbsp;联系方式 : <span>*</span>
         </div>
-        <input type="text" id="phone">
+        <input type="text" id="phone" />
       </div>
     </div>
     <div class="form_label message">
@@ -43,7 +43,6 @@
     ecomOperate: "电商运营",
   }
   var dataName = map[type] || "首页";
-  console.log();
   $(".form_btn").click(function(){
     var name = $("#name").val();
     var phone = $("#phone").val()
@@ -57,7 +56,7 @@
       return false;
     }
     $.ajax({
-    	type: 'post',
+    	type: 'get',
     	url: 'http://info.wkefu.com/api/activity2018/messageBox',
     	data: {
     		'name': name+" (来源页面: 斗量传媒_"+dataName+")",
@@ -77,4 +76,5 @@
     	}
     });
   })
+ 
 </script>
