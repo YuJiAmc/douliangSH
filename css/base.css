@@ -25,7 +25,7 @@ img {
   vertical-align: middle;
 }
 html {
-  min-width: 1024px;
+  /* min-width: 1024px; */
 }
 body {
   font-family: "微软雅黑";

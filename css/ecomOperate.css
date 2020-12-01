@@ -289,6 +289,14 @@
   padding: .94rem /* 180/192 */ 0;
   background-color: #fff;
 }
+.issues li>img{
+  width: .99rem /* 190/192 */;
+  height: .99rem /* 190/192 */;
+}
+.issues li a>img{
+  width: .68rem /* 130/192 */;
+  height: .14rem /* 26/192 */;
+}
 .issues ul {
   display: inline-block;
   margin: 0 auto;
