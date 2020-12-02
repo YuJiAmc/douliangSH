@@ -6,14 +6,14 @@
   display: flex;
   display: -ms-flexbox;
   justify-content: center;
-  padding: .42rem /* 80/192 */;
+  padding: .21rem /* 40/192 */;
   box-sizing: content-box;
 }
 .footer ul {
   margin-right: .78rem /* 150/192 */;
 }
 .footer ul li{
-  margin-bottom: .09rem /* 18/192 */;
+  margin-bottom: .06rem /* 12/192 */;
 }
 .footer ul :last-child{
   margin-bottom: 0;
@@ -23,6 +23,7 @@
 }
 .footer .erweima {
   text-align: center;
+  margin-top: .29rem /* 55/192 */;
 }
 .footer .erweima p {
   margin-top: .05rem /* 10/192 */;
@@ -35,12 +36,14 @@
   font-size: .07rem /* 14/192 */;
 }
 .footer .line{
-  height: .81rem /* 155/192 */;
+  height: .78rem /* 150/192 */;
   width: .01rem /* 2/192 */;
   background-color: #949494;
   margin: 0 .36rem /* 70/192 */;
+  margin-top: .26rem /* 50/192 */;
 }
 .footer .telephone{
+  margin-top: .22rem /* 42/192 */;
   text-align: center;
 }
 .footer .telephone p:first-child{
