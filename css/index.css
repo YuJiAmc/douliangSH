@@ -29,6 +29,9 @@
 .process li:nth-child(4) {
   background-image: url("../img/index/2_06_min.jpg");
 }
+.compress_bgi a{
+  color: #fff;
+}
 .bg_mask {
   opacity: 0;
   height: 100%;
