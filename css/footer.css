@@ -23,7 +23,7 @@
 }
 .footer .erweima {
   text-align: center;
-  margin-top: .29rem /* 55/192 */;
+  margin-top: .23rem /* 45/192 */;
 }
 .footer .erweima p {
   margin-top: .05rem /* 10/192 */;
@@ -40,10 +40,10 @@
   width: .01rem /* 2/192 */;
   background-color: #949494;
   margin: 0 .36rem /* 70/192 */;
-  margin-top: .26rem /* 50/192 */;
+  margin-top: .23rem /* 45/192 */;
 }
 .footer .telephone{
-  margin-top: .22rem /* 42/192 */;
+  margin-top: .2rem /* 38/192 */;
   text-align: center;
 }
 .footer .telephone p:first-child{

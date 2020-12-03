@@ -29,7 +29,7 @@
 .process li:nth-child(4) {
   background-image: url("../img/index/2_06_min.jpg");
 }
-.compress_bgi a{
+.process li a{
   color: #fff;
 }
 .bg_mask {
@@ -334,4 +334,92 @@
   position: absolute;
   top: 50%;
   right: 15%;
+}
+/* news_informations */
+.news_informations {
+  color: #fff;
+  background-color: rgba(54,41,62, .6);
+  text-align: center;
+  font-size: .29rem /* 55/192 */;
+  padding-top: .31rem /* 60/192 */;
+  padding-bottom: .47rem /* 90/192 */;
+}
+.news_informations >p{
+  margin: .13rem /* 25/192 */ 0 .21rem /* 40/192 */ 0;
+  font-size: .16rem /* 30/192 */;
+}
+.news_content {
+  display: inline-block;
+}
+.content_newest,.news_list {
+  float: left;
+  width: 2.71rem /* 520/192 */;
+}
+.content_newest .newest_imgs{
+  width: 2.6rem /* 500/192 */;
+  height: 1.46rem /* 280/192 */;
+  background-color: #fff;
+}
+.content_newest .newest_imgs img{
+  width: 100%;
+  height: 100%;
+}
+.newest_desc {
+  text-align: left;
+  font-size: .1rem /* 20/192 */;
+}
+.desc_title {
+  overflow: hidden;
+  margin-top: .06rem /* 12/192 */;
+}
+.desc_title > div {
+  color: #f7f7f7;
+  float: left;
+  width: 2.34rem /* 450/192 */;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.newest_desc span{
+  float: left;
+  font-size: .08rem /* 16/192 */;
+  color: #888;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.newest_desc p{
+  color: #888;
+  margin: 0;
+  font-size: .09rem /* 18/192 */;
+}
+
+.list_item {
+  color: #f7f7f7;
+  height: .46rem /* 88/192 */;
+  padding:.09rem /* 18/192 */ .1rem /* 20/192 */;
+  box-sizing: border-box;
+  border: .01rem /* 2/192 */ solid #f7f7f7;
+  display: flex;
+  text-align: left;
+  margin-bottom: .03rem /* 5/192 */;
+}
+.list_item > .date {
+  font-size: .1rem /* 20/192 */;
+  text-align: center;
+}
+.list_item > .line {
+  height: .26rem /* 50/192 */;
+  width: .01rem /* 2/192 */;
+  background-color: #f7f7f7;
+  margin: 0 .06rem /* 12/192 */;
+}
+.list_item_desc {
+  line-height: .14rem /* 26/192 */;
+  font-size: .09rem /* 18/192 */;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
