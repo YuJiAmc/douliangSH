@@ -1,0 +1,120 @@
+.news_center {
+  padding-top: .57rem /* 110/192 */;
+  margin-bottom: .26rem /* 50/192 */;
+}
+.news_center .title {
+  text-align: center;
+  color: #248af3;
+  font-size: .29rem /* 55/192 */;
+  line-height: .29rem /* 55/192 */;
+  margin-bottom: .16rem /* 30/192 */;
+}
+.news_center .title p{
+  display: inline;
+  font-size: .16rem /* 30/192 */;
+  border-bottom: .02rem /* 3/192 */ solid #a5c6fe;
+  padding-bottom: .01rem /* 2/192 */;
+}
+/* list-item */
+.list_item{
+  font-size: .08rem /* 16/192 */;
+  margin: 0 auto;
+  width: 5.76rem /* 1105/192 */;
+  padding-top: .23rem /* 45/192 */;
+  border-bottom: 1px solid #c4c4c4;
+}
+.list_item .new_date{
+  font-size: .16rem /* 30/192 */;
+  float: left;
+  text-align: center;
+  font-weight: 600;
+}
+.list_item .article{
+  margin-left: .13rem /* 25/192 */;
+  float: left;
+  width: 5.21rem /* 1000/192 */;
+}
+.new_date .month{
+  color: #fff;
+  width: .39rem /* 75/192 */;
+  height: .27rem /* 52/192 */;
+  line-height: .27rem /* 52/192 */;
+  background-color: #959595;
+}
+.new_date span {
+  font-weight: normal;
+  font-size: .07rem /* 13/192 */;
+}
+.new_date .day{
+  line-height: .39rem /* 75/192 */;
+}
+.article .head{
+  font-size: .09rem /* 18/192 */;
+  color: #2d2d2d;
+}
+.read-num {
+  display: inline-block;
+  font-size: .07rem /* 14/192 */;
+  border-bottom: 1px solid #2d2d2d;
+  padding-bottom: .01rem /* 2/192 */;
+}
+
+.main {
+  margin-top: .09rem /* 18/192 */;
+  line-height: .14rem /* 26/192 */;
+  padding-bottom: .26rem /* 50/192 */;
+  position: relative;
+}
+.check {
+  cursor: pointer;
+  line-height: .23rem /* 45/192 */;
+  color: #2d2d2d;
+  font-size: .08rem /* 16/192 */;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.list_item:hover .read-num {
+  border-bottom: 1px solid #2876f0;
+}
+.list_item:hover .month {
+  background-color: #2876f0;
+}
+.list_item:hover .head {
+  color: #2876f0;
+}
+.list_item:hover .check {
+  color: #2876f0;
+}
+
+
+
+
+/* pagination */
+.pagination li:not(:last-child) > a {
+  margin-right: .05rem /* 10/192 */;
+}
+.pagination li > a {
+  border-color: #C8C8C8;
+  border-radius: .02rem /* 4/192 */;
+  color: #000000;
+  cursor: pointer;
+}
+
+.pagination li.thisclass > a, .pagination li.thisclass > a:hover, .pagination li.thisclass > a:focus {
+  background-color: #8D8D8D;
+  color: #ffffff;
+  border-color: #C8C8C8;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus{
+    background-color: #2876f0;
+    border-color: #2876f0;
+}
+#paginationSelect{
+  position: absolute;
+  top: 20px;
+  width: 42px;
+  height: 30px;
+  margin-left: 10px;
+  border: 1px solid #C8C8C8;
+}

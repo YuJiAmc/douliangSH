@@ -10,7 +10,7 @@
 .header-nav { 
   height: .6rem /* 116/192 */;
   line-height:  .6rem /* 116/192 */;
-  margin-right: .78rem /* 150/192 */;
+  margin-right: .52rem /* 100/192 */;
 }
 .header-nav li{
   float: left;
@@ -247,4 +247,8 @@
 }
 #mgwb .back_top li:nth-child(3) .back_top_icon{
   background-image: url(../img/mgwb/11_08.png);
+}
+/* newsCenter */
+#newsCenter .back_top li:nth-child(5) .back_top_icon{
+    background-image: url(../img/newsCenter/top.png);
 }
