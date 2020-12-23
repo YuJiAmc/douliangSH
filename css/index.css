@@ -414,12 +414,21 @@
   margin: 0 .06rem /* 12/192 */;
 }
 .list_item_desc {
+  overflow: hidden;
+  height: 50px;
+}
+.list_item_desc p {
   line-height: .14rem /* 26/192 */;
   font-size: .09rem /* 18/192 */;
   word-break: break-all;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+.list_item_desc p,span {
+  font-size: .09rem /* 18/192 */ !important;
+  color: #fff !important;
+  background-color: transparent !important;
 }

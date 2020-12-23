@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>抖音|短视频|直播代运营-淘宝|天猫主播直播代播-代播服务商-斗量传媒</title>
+  <meta name="baidu-site-verification" content="code-6EeonmxLw2" />
   <meta name="keywords" content="抖音代运营,短视频代运营,直播代播,主播代播,直播代运营,代播服务商">
   <meta name="description" content="斗量传媒作为官方认证的MCN机构，为客户提供抖音代运营、短视频代运营、直播代播、主播代播、直播代运营、淘宝|天猫直播代播、内容制作等服务，是专业的代播服务商！斗量传媒“专业”的服务水准和“专注”的服务态度、成熟的制作力，受到客户一致的认可。如果有抖音代运营、短视频代运营、直播代播、创意策划、视频摄制等需求，记得联系我们！">
   <script src="./js/flexible.js"></script>
@@ -62,7 +63,7 @@
   </div>
   <ul class="process clearfix">
     <li class="compress_bgi">
-      <a href="http://www.douliangsh.com/dyop.html">
+      <a href="http://www.douliangsh.com/dyop.html" target="_blank">
         <div class="bg_mask"></div>
         <div class="process_des">
           <div>01</div>
@@ -83,7 +84,7 @@
       </a>
     </li>
     <li class="compress_bgi">
-      <a href="http://www.douliangsh.com/eclv.html">
+      <a href="http://www.douliangsh.com/eclv.html" target="_blank">
         <div class="bg_mask"></div>
         <div class="process_des">
           <div>02</div>
@@ -105,7 +106,7 @@
       </a>
     </li>
     <li class="compress_bgi">
-      <a href="http://www.douliangsh.com/dypx.html">
+      <a href="http://www.douliangsh.com/dypx.html" target="_blank">
         <div class="bg_mask"></div>
         <div class="process_des">
           <div>03</div>
@@ -127,7 +128,7 @@
       </a>
     </li>
     <li class="compress_bgi">
-      <a href="http://www.douliangsh.com/ecop.html">
+      <a href="http://www.douliangsh.com/ecop.html" target="_blank">
         <div class="bg_mask"></div>
         <div class="process_des">
           <div>04</div>
@@ -286,8 +287,8 @@
     <p>新闻资讯</p>
     <div class="news_content clearfix">
       <div class="content_newest">
-        <div class="newest_imgs">
-          <img src="./img/index/3_11_min.jpg"" alt="">
+        <!-- <div class="newest_imgs">
+          <img src="/ueditor/jsp/upload/image/20201217/1608196111389032471.jpg" title="1608196111389032471.jpg" alt="HEGII.jpg"/>
         </div>
         <div class="newest_desc">
           <div class="desc_title">
@@ -295,17 +296,18 @@
             <span>more></span>
           </div>
           <p>198 阅读量</p>
-        </div>
+        </div> -->
       </div>
       <div class="news_list">
-        <div class="list_item clearfix">
+        <!-- <div class="list_item clearfix">
           <div class="date">
             2020
             <p>11/12</p>
           </div>
           <div class="line"></div>
           <div class="list_item_desc">
-            【人民日报经济网】上海网萌：2020双十一68.606亿再破记录【人民日报经济网】上海网萌：2020双十一68.606亿再破记录【人民日报经济网】上海网萌：2020双十一68.606亿再破记录
+            <P>【人民日报经济网】上海网萌：2020双十一68.606亿再破记录</P>
+            <P>【人民日报经济网】上海网萌：2020双十一68.606亿再破记录【人民日报经济网】上海网萌：2020双十一68.606亿再破记录</P>
           </div>
         </div>
         <div class="list_item clearfix">
@@ -337,7 +339,7 @@
           <div class="list_item_desc">
             【人民日报经济网】上海网萌：2020双十一68.606亿再破记录【人民日报经济网】上海网萌：2020双十一68.606亿再破记录【人民日报经济网】上海网萌：2020双十一68.606亿再破记录
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -357,6 +359,90 @@
         $('.swiper-next').click(function() {
             slider.swipeNext();
         });
+
+        $.ajax({
+          type: 'get',
+          url: 'http://info.wkefu.com/api/activity2018/douLiangSearchNews',
+          data: {
+            'source':"1"
+          },
+          success: function(data) {
+            if(data.resultCode == 0){
+              let  arrlist = data.resultData.map(item=>{
+                return{
+                  ...item,
+                  month: item.createTime.slice(5,7),
+                  day: item.createTime.slice(8,10),
+                  year: item.createTime.slice(0,4),
+                }
+              })
+              // 特推
+              let spRecommend = arrlist.find(i=> i.status == 4);
+              if(spRecommend){
+                $(".content_newest").append(
+                  `
+                  <div class="newest_imgs">
+                    <img src="/ueditor/jsp/upload/image/20201217/1608196111389032471.jpg" title="1608196111389032471.jpg" alt="HEGII.jpg"/>
+                  </div>
+                  <div class="newest_desc">
+                    <div class="desc_title">
+                      <div>${spRecommend.day} / ${spRecommend.month} ${spRecommend.title}</div>
+                      <span><a href="http://www.douliangsh.com/newsList.html" target="_blank" style="color: #888">more></a></span>
+                    </div>
+                  `
+                )
+              }else {
+                $(".content_newest").append(
+                  `
+                  <div class="newest_imgs">
+                    <img />
+                  </div>
+                  <div class="newest_desc">
+                    <div class="desc_title">
+                      <div style="color: #888; font-size: 16px;">暂无特特新闻</div>
+                      <span><a href="http://www.douliangsh.com/newsList.html" target="_blank" style="color: #888">more></a></span>
+                    </div>
+                  `
+                )
+              }
+             // 推荐
+             let recommend =  arrlist.filter(i=> i.status !=4)
+             if(recommend && recommend.length) {
+              for (let i = 0; i < recommend.length; i++) {
+                  $(".news_list").append(
+                    `
+                    <div class="list_item clearfix">
+                      <div class="date">
+                        ${recommend[i].year}
+                        <p>${recommend[i].day}/${recommend[i].month}</p>
+                      </div>
+                      <div class="line"></div>
+                      <div class="list_item_desc">
+                        <P>${recommend[i].title}</P>
+                        <P>${$(recommend[i].content).html()}</P>
+                      </div>
+                    </div>
+                    `
+                  )
+                }
+             }else {
+              $(".news_list").append(
+                `
+                <div class="list_item clearfix">
+                  <div class="date">
+                    <p></p>
+                  </div>
+                  <div class="list_item_desc">
+                  </div>
+                </div>
+                `
+              )
+             }
+            }
+          }
+        })
+
+
     })();
   </script>
 </body>

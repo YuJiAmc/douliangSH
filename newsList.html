@@ -70,11 +70,11 @@
         <img id="banner" style="width: 100%;" src="./img/newsCenter/banner.jpg" alt="新闻中心-banner">
       </div>
       <!-- news center -->
-        <div class="news_center">
-          <div class="title">
-            <div>NEWS CENTER</div>
-            <p>新闻中心</p>
-          </div>
+      <div class="news_center">
+        <div class="title">
+          <div>NEWS CENTER</div>
+          <p>新闻中心</p>
+        </div>
         <!-- 列表 -->
         <ul id="newsLists"></ul>
         </ul>
@@ -84,241 +84,189 @@
           <select id="paginationSelect"></select>
         </div>
       </div>
+      <!-- news_detail -->
+      <div class="news_detail">
+      </div>
       <!-- footer -->
       <div id="foot"></div>
     </div>
-
     <script>
+      let arrlist = []
       $(document).ready(function () {
         $('.back_top li:last-child').click(function() {
             $('body,html').animate({scrollTop:0},500);
         })
         $.ajax({
-          type: 'post',
-          url: 'http://info.wkefu.com/mdDouLiangNews/douLiangSearchNews',
+          type: 'get',
+          url: 'http://info.wkefu.com/api/activity2018/douLiangSearchNews',
           data: {
             'source':"2"
           },
           success: function(data) {
-            console.log(data);
-            // if (data.resultCode == '0') {
-            //   alert("留言成功，我们的工作人员已收到你的留言信息，将会在尽快时间内联系你！");
-            // }else{
-            //   alert("我们的网站可能今天心情不太好，留言暂时发送失败，请稍后再试！");
-            // };
-          }
-        });
-        var arrlist = [
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "03",
-          day: "09",
-          read: "109"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-        {
-          title: "上海网萌：2020双十一68.606亿再破记录222",
-          content: "截止至2020年11月11日24时，本年度“双十一年终大促”圆满画上句号。据天猫官方数据，截至24点00分，天猫双11全球狂欢节总成交达4982亿元。据京东官方数据，截至24点00分，11.11京东全球好物节累计下单金额超过突破2715亿元！",
-          month: "04",
-          day: "10",
-          read: "111"
-        },
-      ];
-      var page = 0; // 页数
-        // 生成列表
-        for (let i = 0; i < arrlist.length; i++) {
-          let templates = `
-          <li class="list_item clearfix">
-            <div class="new_date">
-              <div class="month">${arrlist[i].month}<span>/月</span></div>
-              <div class="day">${arrlist[i].day}<span>/日</span></div>
-            </div>
-            <div class="article"> 
-              <div class="head">${arrlist[i].title}</div>
-              <div class="read-num">${arrlist[i].read} 阅读</div>
-              <div class="main">
-                ${arrlist[i].content}
-                <div class="check">阅读全文 》</div>
-              </div>
-            </div>
-          </li>
-          `
-          $("#newsLists").append(templates);
-        }
-        // 页数
-        if ($("#newsLists>li").length % 10 == 0) {
-          page = ($("#newsLists>li").length / 10) | 0;
-        } else {
-          page = (($("#newsLists>li").length / 10) | 0) + 1;
-        }
-        // 页数select框
-        for (let i = 1; i < page + 1; i++) {
-          let option = `
-          <option value='${i}'>${i}</option>
-          `;
-          $("#paginationSelect").append(option);
-        }
-        //页面切换
-        function changePage(index) {
-          $('body,html').animate({scrollTop:0},0);
-          for (var j = 0; j < $("#newsLists>li").length; j++) {
-            $("#newsLists>li")[j].style.display = "none";
-          }
-          for (var j = index * 10; j < (index + 1) * 10; j++) {
-            if ($("#newsLists>li")[j]) {
-              $("#newsLists>li")[j].style.display = "block";
-            }
-          }
-        }
-        changePage(0);
+            if (data.resultCode == '0') {
+              arrlist = data.resultData.map(item=>{
+                return{
+                  ...item,
+                  month: item.createTime.slice(5,7),
+                  day: item.createTime.slice(8,10)
+                }
+              })
+               // 生成列表
+              for (let i = 0; i < arrlist.length; i++) {
+                let templates = `
+                <li class="list_item clearfix">
+                  <div class="new_date">
+                    <div class="month">${arrlist[i].month}<span>/月</span></div>
+                    <div class="day">${arrlist[i].day}<span>/日</span></div>
+                  </div>
+                  <div class="article"> 
+                    <div class="head">${arrlist[i].title}</div>
+                    <div class="main">
+                      <div class="main_content">
+                        ${arrlist[i].content}
+                      </div>
+                      <div class="check" onclick=detail("${arrlist[i].id}")>阅读全文 》</div>
+                    </div>
+                  </div>
+                </li>
+                `
+                $("#newsLists").append(templates);
+              }
+              var page = 0; // 页数
+              // 页数
+              if ($("#newsLists>li").length % 10 == 0) {
+                page = ($("#newsLists>li").length / 10) | 0;
+              } else {
+                page = (($("#newsLists>li").length / 10) | 0) + 1;
+              }
+              // 页数select框
+              for (let i = 1; i < page + 1; i++) {
+                let option = `
+                <option value='${i}'>${i}</option>
+                `;
+                $("#paginationSelect").append(option);
+              }
+              //页面切换
+              function changePage(index) {
+                $('body,html').animate({scrollTop:0},0);
+                for (var j = 0; j < $("#newsLists>li").length; j++) {
+                  $("#newsLists>li")[j].style.display = "none";
+                }
+                for (var j = index * 10; j < (index + 1) * 10; j++) {
+                  if ($("#newsLists>li")[j]) {
+                    $("#newsLists>li")[j].style.display = "block";
+                  }
+                }
+              }
+              changePage(0);
 
-        $("#pageLimit").bootstrapPaginator({
-          currentPage: 1, //当前页面。
-          totalPages: page,
-          bootstrapMajorVersion: 3,
-          numberOfPages: 10,
-          size: "small",
-          itemTexts: function (type, page, current) {
-            switch (type) {
-              case "first":
-                return "首页";
-              case "prev":
-                return "上一页";
-              case "next":
-                return "下一页";
-              case "last":
-                return "末页";
-              case "page":
-                return page;
+              $("#pageLimit").bootstrapPaginator({
+                currentPage: 1, //当前页面。
+                totalPages: page,
+                bootstrapMajorVersion: 3,
+                numberOfPages: 10,
+                size: "small",
+                itemTexts: function (type, page, current) {
+                  switch (type) {
+                    case "first":
+                      return "首页";
+                    case "prev":
+                      return "上一页";
+                    case "next":
+                      return "下一页";
+                    case "last":
+                      return "末页";
+                    case "page":
+                      return page;
+                  }
+                },
+                onPageClicked: function (event, originalEvent, type, page) {
+                  changePage(page - 1);
+                  $("#paginationSelect").val(page);
+                },
+                itemContainerClass: function (type, page, current) {
+                  // 首页末页按钮不高亮
+                  if (page === current && type != "first" && type != "last") {
+                    return "active";
+                  } else {
+                    return "";
+                  }
+                },
+                shouldShowPage: function (type, page, current) {
+                  // 首页末页不显示上一页下一页
+                  var result = true;
+                  switch (type) {
+                    case "first":
+                      result = true;
+                      break;
+                    case "prev":
+                      result = current !== 1;
+                      break;
+                    case "next":
+                      result = current !== this.totalPages;
+                      break;
+                    case "last":
+                      result = true;
+                      break;
+                    case "page":
+                      result = true;
+                      break;
+                  }
+                  return result;
+                },
+              });
+              $("#paginationSelect").change(function () {
+                $("#pageLimit").bootstrapPaginator(
+                  "show",
+                  $("#paginationSelect").val()
+                );
+                changePage(+$("#paginationSelect").val() - 1);
+              });
             }
-          },
-          onPageClicked: function (event, originalEvent, type, page) {
-            changePage(page - 1);
-            $("#paginationSelect").val(page);
-          },
-          itemContainerClass: function (type, page, current) {
-            // 首页末页按钮不高亮
-            if (page === current && type != "first" && type != "last") {
-              return "active";
-            } else {
-              return "";
-            }
-          },
-          shouldShowPage: function (type, page, current) {
-            // 首页末页不显示上一页下一页
-            var result = true;
-            switch (type) {
-              case "first":
-                result = true;
-                break;
-              case "prev":
-                result = current !== 1;
-                break;
-              case "next":
-                result = current !== this.totalPages;
-                break;
-              case "last":
-                result = true;
-                break;
-              case "page":
-                result = true;
-                break;
-            }
-            return result;
-          },
-        });
-        $("#paginationSelect").change(function () {
-          $("#pageLimit").bootstrapPaginator(
-            "show",
-            $("#paginationSelect").val()
-          );
-          changePage(+$("#paginationSelect").val() - 1);
+          }
         });
       });
+
+      function detail(id) {
+        if(!id) {
+          return
+        }
+        $('body,html').animate({scrollTop:0},0);
+        $(".news_center").css("display", "none")
+        $(".news_detail").empty();
+        $(".news_detail").css("display", "block")
+        let inID = ""
+        let detail = arrlist.find((value, index, arr) => {
+          if(value.id == id) inID = index
+          return value.id == id
+        })
+        let tep = `
+        <div class="crumbs w_1200">
+          <img src="./img/newsCenter/home.png" alt="">
+          <span>
+            <a href="/">首页</a> > <a href="/newsList.html">新闻资讯</a> > 
+            <span class="crumbs_title">${detail.title}</span>
+          </span>
+        </div>
+        <div class="news_content w_1200">
+          <div class="news_title">${detail.title}</div>
+          <div class="news_date">${detail.createTime}</div>
+          <div class="line"></div>
+          <div class="main">
+            ${detail.content}
+          </div>
+        </div>
+        <div class="turn_page w_1200">
+          <div>
+            上一篇: <span onclick="detail(${arrlist[inID-1] ? arrlist[inID-1].id : "" })">${arrlist[inID-1] ? arrlist[inID-1].title : "没有了" }</span>
+          </div>
+          <div>
+            下一篇: <span onclick="detail(${arrlist[inID+1] ? arrlist[inID+1].id : "" })">${arrlist[inID+1] ? arrlist[inID+1].title : "没有了" }</span>
+          </div>
+        </div>
+        `
+        $(".news_detail").append(tep);
+      }
     </script>
   </body>
 </html>
