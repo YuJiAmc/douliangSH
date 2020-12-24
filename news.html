@@ -121,6 +121,7 @@
                 $("#newsLists").append("<p class='no_list'>新闻列表为空</p>");
                 $("#paginationSelect").hide()
               }
+
               let urls = "";
               window.location.href.indexOf("?") > -1 ? urls = window.location.href
               .substring(window.location.href.indexOf("?") + 4) : "";
@@ -139,7 +140,7 @@
                     <div class="head">${arrlist[i].title}</div>
                     <div class="main">
                       <div class="main_content">
-                        <div>${arrlist[i].content}</div>
+                        <div>${repalceHtml(arrlist[i].content)}</div>
                       </div>
                       <div class="check">阅读全文 》</div>
                     </div>
@@ -282,6 +283,12 @@
         </div>
         `
         $(".news_detail").append(tep);
+      }
+
+      function repalceHtml(str){
+        var dd=str.replace(/<\/?.+?>/g,"");
+        var dds=dd.replace(/ /g,"");//dds为得到后的内容
+        return dds;
       }
     </script>
   </body>
