@@ -270,7 +270,7 @@
           <div class="news_date">${detail.createTime}</div>
           <div class="line"></div>
           <div class="main">
-            ${detail.content}
+            ${scrComplete(detail.content)}
           </div>
         </div>
         <div class="turn_page w_1200">
@@ -285,10 +285,15 @@
         $(".news_detail").append(tep);
       }
 
+      // 过滤标签
       function repalceHtml(str){
         var dd=str.replace(/<\/?.+?>/g,"");
-        var dds=dd.replace(/ /g,"");//dds为得到后的内容
+        var dds=dd.replace(/ /g,"");
         return dds;
+      }
+      // img src路径补全
+      function scrComplete(str) {
+        return str.replace(/src='\/ueditor/g, "src='http://info.wkefu.com/ueditor")
       }
     </script>
   </body>
