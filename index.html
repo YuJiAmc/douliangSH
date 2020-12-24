@@ -49,7 +49,7 @@
       <li>
         <a href="/mgwb.html">设计外包</a>
       </li>
-      <li class="active">
+      <li>
         <a href="/news.html">新闻资讯</a>
       </li>
       <li>
@@ -367,6 +367,7 @@
   <div id="foot"></div>
   <script src="./js/swiper/idangerous.swiper.min.js"></script>
   <script>
+    let arrlist = [];
     (function() {
         var slider = $('.swiper-container').swiper({
             speed: 500,
@@ -388,7 +389,7 @@
           },
           success: function(data) {
             if(data.resultCode == 0){
-              let  arrlist = data.resultData.map(item=>{
+              arrlist = data.resultData.map(item=>{
                 return{
                   ...item,
                   month: item.createTime.slice(5,7),
@@ -402,11 +403,11 @@
                 $(".content_newest").append(
                   `
                   <div class="newest_imgs">
-                    <img src="/ueditor/jsp/upload/image/20201217/1608196111389032471.jpg" title="1608196111389032471.jpg" alt="HEGII.jpg"/>
+                    <img src='${spRecommend.displayChart}'' alt="spRecommend.jpg"/>
                   </div>
                   <div class="newest_desc">
                     <div class="desc_title">
-                      <div>${spRecommend.day} / ${spRecommend.month} ${spRecommend.title}</div>
+                      <div onclick=detail(${spRecommend.id})>${spRecommend.day} / ${spRecommend.month} ${spRecommend.title}</div>
                       <span><a href="http://www.douliangsh.com/news.html" target="_blank" style="color: #888">more></a></span>
                     </div>
                   `
@@ -419,7 +420,7 @@
                   </div>
                   <div class="newest_desc">
                     <div class="desc_title">
-                      <div style="color: #888; font-size: 16px;">暂无特特新闻</div>
+                      <div style="color: #888; font-size: 16px;">暂无特推新闻</div>
                       <span><a href="http://www.douliangsh.com/news.html" target="_blank" style="color: #888">more></a></span>
                     </div>
                   `
@@ -437,9 +438,8 @@
                         <p>${recommend[i].day}/${recommend[i].month}</p>
                       </div>
                       <div class="line"></div>
-                      <div class="list_item_desc">
-                        <P>${recommend[i].title}</P>
-                        <P>${$(recommend[i].content).html()}</P>
+                      <div class="list_item_desc" onclick=detail(${recommend[i].id})>
+                        ${recommend[i].title}
                       </div>
                     </div>
                     `
@@ -447,23 +447,19 @@
                 }
              }else {
               $(".news_list").append(
-                `
-                <div class="list_item clearfix">
-                  <div class="date">
-                    <p></p>
-                  </div>
-                  <div class="list_item_desc">
-                  </div>
-                </div>
-                `
+                "<p class='no_list'>请先添加推荐新闻</p>"
               )
              }
             }
           }
         })
-
-
     })();
+    function detail(id) {
+        if(!id) {
+          return
+        }
+        window.location.href="news.html?id="+id;
+      }
   </script>
 </body>
 </html>

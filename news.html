@@ -60,7 +60,7 @@
           <li>
             <a href="/mgwb.html">设计外包</a>
           </li>
-          <li>
+          <li class="active">
             <a href="/news.html">新闻资讯</a>
           </li>
           <li>
@@ -92,6 +92,7 @@
       </div>
       <!-- footer -->
       <div id="foot"></div>
+	    <div class="mask"><div style="position: absolute;top: 50%;left: 50%;font-size: 16px; color: #dedede";>请求中请稍后...</div></div>
     </div>
     <script>
       let arrlist = []
@@ -99,6 +100,7 @@
         $('.back_top li:last-child').click(function() {
             $('body,html').animate({scrollTop:0},500);
         })
+				$(".mask").show();
         $.ajax({
           type: 'get',
           url: 'http://info.wkefu.com/api/activity2018/douLiangSearchNews',
@@ -106,6 +108,7 @@
             'source':"2"
           },
           success: function(data) {
+				    $(".mask").hide();
             if (data.resultCode == '0') {
               arrlist = data.resultData.map(item=>{
                 return{
@@ -114,10 +117,20 @@
                   day: item.createTime.slice(8,10)
                 }
               })
+              if(!data.resultData.length) {
+                $("#newsLists").append("<p class='no_list'>新闻列表为空</p>");
+                $("#paginationSelect").hide()
+              }
+              let urls = "";
+              window.location.href.indexOf("?") > -1 ? urls = window.location.href
+              .substring(window.location.href.indexOf("?") + 4) : "";
+              if(urls) {
+                detail(urls)
+              }
                // 生成列表
               for (let i = 0; i < arrlist.length; i++) {
                 let templates = `
-                <li class="list_item clearfix">
+                <li class="list_item clearfix" onclick=detail("${arrlist[i].id}")>
                   <div class="new_date">
                     <div class="month">${arrlist[i].month}<span>/月</span></div>
                     <div class="day">${arrlist[i].day}<span>/日</span></div>
@@ -126,9 +139,9 @@
                     <div class="head">${arrlist[i].title}</div>
                     <div class="main">
                       <div class="main_content">
-                        ${arrlist[i].content}
+                        <div>${arrlist[i].content}</div>
                       </div>
-                      <div class="check" onclick=detail("${arrlist[i].id}")>阅读全文 》</div>
+                      <div class="check">阅读全文 》</div>
                     </div>
                   </div>
                 </li>
@@ -247,7 +260,7 @@
         <div class="crumbs w_1200">
           <img src="./img/newsCenter/home.png" alt="">
           <span>
-            <a href="/">首页</a> > <a href="/newsList.html">新闻资讯</a> > 
+            <a href="/">首页</a> > <a href="/news.html">新闻资讯</a> > 
             <span class="crumbs_title">${detail.title}</span>
           </span>
         </div>
