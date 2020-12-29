@@ -3,9 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>联系我们-斗量传媒</title>
   <meta name="keywords" content="联系我们">
+  <meta name = "format-detection" content = "telephone=no">
 	<meta name="description" content="上海斗量文化传媒有限公司是一家专业的短视频代运营服务商，主营创意策划、视频摄制、运营推广、网络直播等短视频代运营等。我们拥有专业的服务团队，创新的思维、灵动的概念，帮助企业解决营销难题。斗量传媒，创意助力未来！">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -16,8 +17,10 @@
     document.write('<link href="./css/contact.css?v='+ new Date().getTime()+'" rel="stylesheet" >');
     document.write('<link href="./css/footer.css?v='+ new Date().getTime()+'" rel="stylesheet" >');
     document.write('<link href="./css/contactUs.css?v='+new Date().getTime()+'" rel="stylesheet" >');
+    document.write('<link href="./css/mobile/ctus.css?v='+new Date().getTime()+'" media="screen and (max-width:750px)" rel="stylesheet" >');
   </script>
-  <script src="./js/b.js"></script>
+   <script src="./js/b.js"></script>
+   <script src="./js/b2.js"></script>
 </head>
 <script src="./js/jquery-1.12.4.js"></script>
 <script>
@@ -127,5 +130,193 @@
     <!-- footer -->
     <div id="foot"></div>
   </div>
+
+  <!-- 移动端 -->
+  <div id="contactUs_m">
+    <div class="head_m clearfix">
+      <a href="/" class="logo_m fl">
+        <img src="./img/mobile/index/6-3.png" alt="m-斗量传媒-logo">
+      </a>
+      <img id="navSlideDown" src="./img/mobile/index/6-2.png" alt="m-6-2.png">
+    </div>
+    <!-- banner -->
+    <img class="banner_m" src="./img/mobile/ctus/1_02.png" alt="m-联系我们-banner">
+    <div class="gsjj">
+      <div class="mt_title">
+        <p>公司简介</p>
+      </div>
+      <div class="gsjj_content">
+        上海斗量文化传媒有限公司——短视频代运营服务商 , 抖音官方认证 MCN机构。主营业务：创意策划、视频摄制、运营推广、网络直播等短视频代运营服务体系。公司拥有一支富有创造力的核心团队 , 我们奉行“专业”的服务水准和“专注”的服务态度 , 用创新的思维 , 灵动的概念 , 以及成熟的制作力争成为新兴媒体沙漠中璀璨的绿洲。目前已与多行业客户跨界合作 , 并得到客户一致认可。
+      </div>
+    </div>
+    <div class="whyneed">
+      <div class="mt_title">
+        <p>为什么需要我们</p>
+      </div>
+      <div class="gsjj_content">
+        如今 , 传统推广渠道收效甚微 , 原本的行业巨头可能摇摇欲坠 , 而名不见经传的小辈却借力网络营销悄然壮大。所以 ,请不要犹豫。如果您担心营销公司做不到您要的效果 , 团队执行不出您想要的状态；又担心推广费用太高 , 投入产出比是否合算；又因为公司一直在传统领域打拼 , 不熟悉网红直播领域 , 担心推广后维护更新没有保障等。没关系 , 这些问题联系我们一次解决。</p>
+      </div>
+    </div>
+    <div class="resolve"> 
+      <div class="mt_title">
+        有问题要解决?找我们!
+      </div>
+      <ul class="clearfix">
+        <li>
+          <img src="./img/contactUs/1_14.png" alt="contactUs-1_14.png">
+          <p>微信</p>
+          <img class="hover_img" src="./img/index/erweima.jpg" alt="contactUs-erweima">
+        </li>
+        <li>
+          <img src="./img/contactUs/1_16.png" alt="contactUs-1_16.png">
+          <p>电话</p>
+          <div class="hover_ph">19901638825</div>
+        </li>
+        <li>
+          <a
+          target="_blank"
+          href="http://wpa.qq.com/msgrd?v=3&uin=2885834575&site=qq&menu=yes"
+          ><img src="./img/contactUs/1_20.png" alt="contactUs-1_20.png">
+          <p>客服</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="message">
+      <div class="mt_title">
+        朋友 , 请填写您的需求提交给我们 !
+      </div>
+      <div class="message_content">
+        <div class="message_label">
+          <div class="name">
+            <img src="./img/mobile/ctus/1_15.png" alt="1_15.png">
+            &nbsp;您的姓名 : <span>*</span>
+          </div>
+          <input type="text" id="name" />
+        </div>
+        <div class="message_label">
+          <div class="phone">
+            <img src="./img/mobile/ctus/1_19.png" alt="1_19.png">
+            &nbsp;联系方式 : <span>*</span>
+          </div>
+          <input type="text" id="phone" />
+        </div>
+        <div class="message_label">
+          <div class="textarea">
+            <img src="./img/mobile/ctus/1_22.png" alt="1_22.png">
+            &nbsp;留言 :
+          </div>
+          <textarea id="textarea"></textarea>
+        </div>
+      </div>
+      <div class="message_btn">
+        <span>立即获取方案与报价</span>
+      </div>
+    </div>
+    <img style="width: 100%;" src="./img/mobile/ctus/1_29.png" alt="1_29.png">
+    <div class="foot_m">
+      <ul class="foot_nav clearfix">
+        <li>
+          <a href="/">斗量首页</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/dyop.html">抖音运营</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/eclv.html">电商直播</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/dypx.html">抖音培训</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/ecop.html">电商运营</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/mgwb.html">设计外包</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/news.html">新闻资讯</a>
+        </li>
+        <span>|</span>
+        <li>
+          <a href="/ctus.html">联系我们</a>
+        </li>
+      </ul>
+      <div class="information">
+        <div class="ewm"> 
+          <img src="./img/index/erweima2.png" alt="m-footer-erweima">
+          <p>微信咨询</p>
+        </div>
+        <div class="divid"></div>
+        <div class="consult">
+          <p>工作时间 : 9:00-18:00</p>
+          <p>在线咨询 : <span>199-0163-8825</span></p>
+          <p>运营总部地址 : 上海浦东张江路368号29栋611</p>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- 导航栏 -->
+   <div class="nav_list">
+    <div class="nav_head clearfix">
+      <div class="fl">
+        <img src="./img/mobile/index/6-3.png" alt="m-6-3.png">
+      </div>
+      <span id="navSlideUp" >✕</span>
+    </div>
+    <ul>
+      <li>
+        <a href="/">斗量首页</a>
+      </li>
+      <li>
+        <a href="/dyop.html">抖音运营</a>
+      </li>
+      <li>
+        <a href="/eclv.html">电商直播</a>
+      </li>
+      <li>
+        <a href="/dypx.html">抖音培训</a>
+      </li>
+      <li>
+        <a href="/ecop.html">电商运营</a>
+      </li>
+      <li>
+        <a href="/mgwb.html">设计外包</a>
+      </li>
+      <li>
+        <a href="/news.html">新闻资讯</a>
+      </li>
+      <li class="active">
+        <a href="/ctus.html">联系我们</a>
+      </li>
+    </ul>
+    <div class="nav_phone">
+      <img src="./img/mobile/index/1_11.png" alt="1_11.png">
+      <p>199 0163 8825</p>
+    </div>
+    <div class="nav_message">
+      <img src="./img/mobile/index/1_15.png" alt="1_15.png">
+    </div>
+    <div class="nav_ewm">
+      <img src="./img/mobile/index/1_19.png" alt="1_19.png">
+    </div>
+  </div>
+  <script>
+    $("#navSlideDown").click(function () {
+      $("#contactUs_m").hide()
+      $(".nav_list").slideDown();
+     })
+     $("#navSlideUp").click(function () {
+      $(".nav_list").slideUp("fast",function(){
+        $("#contactUs_m").show()
+      })
+     })
+  </script>
 </body>
 </html>

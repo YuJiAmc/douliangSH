@@ -15,6 +15,7 @@ ul,ol {
   zoom:1;
 }
 a {
+  color: #333;
   text-decoration:none;
 }
 li {
@@ -30,6 +31,7 @@ html {
 body {
   font-family: "微软雅黑";
   font-size: 12px;
+  color: #333;
 }
 .clearfix:before,.clearfix:after {
   content:"";

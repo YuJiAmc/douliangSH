@@ -102,3 +102,10 @@
 .resolve ul li:hover .hover_ph{
   opacity: 1;
 }
+
+#contactUs_m{
+  display: none;
+}
+.nav_list {
+  display: none;
+}

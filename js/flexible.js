@@ -3,25 +3,19 @@
   var dpr = window.devicePixelRatio || 1;
 
   // adjust body font size
-  function setBodyFontSize() {
-    if (document.body) {
-      document.body.style.fontSize = 12 * dpr + "px";
-    } else {
-      document.addEventListener("DOMContentLoaded", setBodyFontSize);
-    }
-  }
-  setBodyFontSize();
+  // function setBodyFontSize() {
+  //   if (document.body) {
+  //     document.body.style.fontSize = 12 * dpr + "px";
+  //   } else {
+  //     document.addEventListener("DOMContentLoaded", setBodyFontSize);
+  //   }
+  // }
+  // setBodyFontSize();
 
   // set 1rem = viewWidth / 10
   function setRemUnit() {
     var rem = docEl.clientWidth / 10;
     docEl.style.fontSize = rem + "px";
-    // min-width 1024px
-    // if(rem < 102.4) {
-    //   docEl.style.fontSize = "102.4px"
-    // }else {
-    //   docEl.style.fontSize = rem + "px";
-    // }
   }
 
   setRemUnit();
