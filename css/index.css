@@ -301,19 +301,26 @@
   cursor: pointer;
   z-index: 99;
 }
-.case_swiper .swiper-control img {
+.case_swiper .swiper-control {
   height: .32rem /* 62/192 */;
   width: .32rem /* 62/192 */;
 }
-.case_swiper  p{
+.case_swiper p{
   margin-top: .13rem /* 25/192 */;
   font-size: .11rem /* 22/192 */;
 }
 .case_swiper .swiper-prev {
   left: 15%;
+  background: url(../img/index/jiantou1.png) no-repeat;
+  background-size: contain;
 }
 .case_swiper .swiper-next {
   right: 15%;
+  background: url(../img/index/jiantou2.png) no-repeat;
+  background-size: contain;
+}
+.swiper-control:focus {
+  outline: none;
 }
 
 .case ul li p{

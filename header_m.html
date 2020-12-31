@@ -1,0 +1,65 @@
+<!-- 移动端导航栏 -->
+<!-- <div class="head_m clearfix">
+  <a href="/" class="logo_m fl">
+    <img src="./img/mobile/index/6-3.png" alt="m-斗量传媒-logo">
+  </a>
+  <img id="navSlideDown" src="./img/mobile/index/6-2.png" alt="m-6-2.png">
+</div> -->
+<div class="nav_list">
+  <div class="nav_head clearfix">
+    <div class="fl">
+      <img src="./img/mobile/index/6-3.png" alt="m-6-3.png">
+    </div>
+    <span id="navSlideUp">✕</span>
+  </div>
+  <ul>
+    <li>
+      <a href="/">斗量首页</a>
+    </li>
+    <li>
+      <a href="/dyop.html">抖音运营</a>
+    </li>
+    <li>
+      <a href="/eclv.html">电商直播</a>
+    </li>
+    <li>
+      <a href="/dypx.html">抖音培训</a>
+    </li>
+    <li>
+      <a href="/ecop.html">电商运营</a>
+    </li>
+    <li>
+      <a href="/mgwb.html">设计外包</a>
+    </li>
+    <li>
+      <a href="/news.html">新闻资讯</a>
+    </li>
+    <li class="active">
+      <a href="/ctus.html">联系我们</a>
+    </li>
+  </ul>
+  <div class="nav_phone">
+    <img src="./img/mobile/index/1_11.png" alt="1_11.png">
+    <p>199 0163 8825</p>
+  </div>
+  <div class="nav_message">
+    <img src="./img/mobile/index/1_15.png" alt="1_15.png">
+  </div>
+  <div class="nav_ewm">
+    <img src="./img/mobile/index/1_19.png" alt="1_19.png">
+  </div>
+</div>
+
+<script>
+  $("#navSlideDown").click(function () {
+    $("#mobile").hide()
+    $(".nav_list").slideDown("fast",function(){
+      $("#mobile").hide()
+    })
+  })
+  $("#navSlideUp").click(function () {
+    $(".nav_list").slideUp("fast",function(){
+      $("#mobile").show()
+    })
+  })
+</script>

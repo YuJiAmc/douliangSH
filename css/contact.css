@@ -219,3 +219,94 @@
   height: .3rem /* 58/192 */;
   line-height: .3rem /* 58/192 */;
 }
+
+/* 移动端 */
+@media screen and (max-width: 750px) {
+  .contact_m .contact_m_content{
+    display: inline-block;
+    margin-top: .53rem /* 40/75 */;
+  }
+  .contact_m_label {
+    margin-bottom: .27rem /* 20/75 */;
+  }
+  .contact_m_label >div{
+    text-align: left;
+    font-size: .32rem /* 24/75 */;
+    color: #d38a61;
+    margin-bottom: .13rem /* 10/75 */;
+  }
+  /* label颜色区分 */
+  #index_contact_m .contact_m_label >div{
+    color: #fff
+  }
+  .contact_m_label >div span{
+    color: red;
+  }
+  .contact_m_label .name >div{
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: .43rem /* 32/75 */;
+    height: .44rem /* 33/75 */;
+    background: url(../img/mobile/ctus/1_15.png) no-repeat;
+  }
+  .contact_m_label .phone >div{
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: .32rem /* 24/75 */;
+    height: .47rem /* 35/75 */;
+    background: url(../img/mobile/ctus/1_19.png) no-repeat;
+  }
+  .contact_m_label .textarea >div{
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: .41rem /* 31/75 */;
+    height: .41rem /* 31/75 */;
+    background: url(../img/mobile/ctus/1_22.png) no-repeat;
+  }
+  /* label图标区分 */
+  #index_contact_m .contact_m_label .name >div{
+    background: url(../img/mobile/index/5_03.png) no-repeat;
+  }
+  #index_contact_m .contact_m_label .phone >div{
+    background: url(../img/mobile/index/5_07.png) no-repeat;
+  }
+  #index_contact_m .contact_m_label .textarea >div{
+    background: url(../img/mobile/index/5_10.png) no-repeat;
+  }
+  .contact_m_label input{
+    box-sizing: border-box;
+    width: 5.87rem /* 440/75 */;
+    height: .64rem /* 48/75 */;
+    font-size: .32rem /* 24/75 */;
+    border: 1px solid #6e6e6e;
+    outline: none;
+    box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
+    padding-left: .13rem /* 10/75 */;
+  }
+  .contact_m_label textarea {
+    box-sizing: border-box;
+    resize: none;
+    padding: .13rem /* 10/75 */;
+    width: 5.87rem /* 440/75 */;
+    height: 1.87rem /* 140/75 */;
+    font-size: .32rem /* 24/75 */;
+    box-shadow: .01rem /* 1/192 */ .01rem /* 2/192 */ .03rem /* 6/192 */ rgba(95, 95, 95, .8);
+  }
+  .contact_m_btn {
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: .27rem /* 20/75 */;
+    width: 5.12rem /* 384/75 */;
+    height: .73rem /* 55/75 */;
+    background-image: url(../img/mobile/ctus/2_03.png);
+    line-height: .73rem /* 55/75 */;
+    font-size: .32rem /* 24/75 */;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* 提交按钮区分 */
+  #index_contact_m .contact_m_btn {
+    background-image: url(../img/mobile/index/5_14.png);
+  }
+}

@@ -68,3 +68,59 @@
   color: #fff;
   font-size: .11rem /* 22/192 */;
 }
+
+
+/* 移动端 */
+@media screen and (max-width: 750px) {
+  .foot_m {
+    background-color: #000;
+  }
+  .foot_m .foot_nav {
+    color: #838383;
+    height: .96rem /* 72/75 */;
+    line-height: .96rem /* 72/75 */;
+    font-size: .24rem /* 18/75 */;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #323232;
+  }
+  .foot_nav li a {
+    color: #fff;
+  }
+  .information_m {
+    height: 3.07rem /* 230/75 */;
+    display: flex;
+    display: -ms-flexbox;
+    justify-content: center;
+    align-items: center;
+  }
+  .information_m .ewm img{
+    width: 1.23rem /* 92/75 */;
+    height: 1.24rem /* 93/75 */;
+  }
+  .information_m .ewm p {
+    color: #fff;
+    margin-top: .07rem /* 5/75 */;
+    font-size: .27rem /* 20/75 */;
+  }
+  .information_m .divid {
+    width: 1px;
+    height: 1.67rem /* 125/75 */;
+    background-color: #323232;
+    margin: 0 .67rem /* 50/75 */;
+  }
+  .information_m .consult{
+    color: #fff;
+    font-size: .27rem /* 20/75 */;
+    text-align: left;
+  }
+  .information_m .consult p{
+    line-height: .56rem /* 42/75 */;
+  }
+  .information_m .consult span{
+    font-size: .37rem /* 28/75 */;
+    color: #ff3366;
+    font-weight: bold;
+    font-style: oblique;
+  }
+}

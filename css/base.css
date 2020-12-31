@@ -50,3 +50,26 @@ body {
 .fr{
 	float: right;
 }
+
+
+#mobile{
+  display: none;
+  text-align: center;
+}
+.nav_list {
+  display: none;
+}
+/* banner加载前预留高度 */
+.banner_m {
+  width: 100%;
+  margin-top: 1.73rem /* 130/75 */;
+  position: relative;
+  overflow: hidden;
+}
+.banner_m img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

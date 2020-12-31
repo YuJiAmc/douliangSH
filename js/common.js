@@ -1,8 +1,11 @@
 // header footer contact back_top
 $(function(){
   $("#head").load("./header.html?v="+new Date().getTime());
+  $("#head_m").load("./header_m.html?v="+new Date().getTime());
   $("#foot").load("./footer.html?v="+new Date().getTime());
+  $("#foot_m").load("./footer_m.html?v="+new Date().getTime());
   $("#contact").load("./contact.html?v="+new Date().getTime());
+  $("#contact_m").load("./contact_m.html?v="+new Date().getTime());
   setTimeout(() => {
       $(window).scroll(function () {
           if ($(window).scrollTop() > $("#banner").height()){
