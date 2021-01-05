@@ -121,6 +121,9 @@
     <div id="head_m"></div>
 
     <script>
+      document.title = "新闻资讯-上海斗量文化传媒有限公司";
+      document.getElementsByTagName("meta")[2]["content"]= "新闻资讯";
+      document.getElementsByTagName("meta")[3]["content"]= "上海斗量文化传媒有限公司——短视频代运营服务商 , 抖音官方认证 MCN机构，为您整理抖音短视频代运营等相关新闻资讯。";
       let arrlist = []
       $(document).ready(function () {
         $('.back_top li:last-child').click(function() {
@@ -148,7 +151,8 @@
                 $("#newsLists_m").append("<p class='no_list'>新闻列表为空</p>");
                 $("#paginationSelect").hide()
               }
-
+              
+              // 首页新闻中心跳转
               var newsId = localStorage.getItem("newsId");
               if(newsId) {
                 localStorage.removeItem("newsId")
@@ -297,6 +301,9 @@
           if(value.id == id) inID = index
           return value.id == id
         })
+        document.title = detail.seoTitle;
+        document.getElementsByTagName("meta")[2]["content"]= detail.seoKeyWords;
+        document.getElementsByTagName("meta")[3]["content"]= detail.seoDescription;
         let tep = `
         <div class="crumbs w_1200">
           <img src="./img/newsCenter/home.png" alt="">
