@@ -6,7 +6,7 @@
   display: flex;
   display: -ms-flexbox;
   justify-content: center;
-  padding: .21rem /* 40/192 */;
+  padding: .26rem /* 50/192 */;
   box-sizing: content-box;
 }
 .footer ul {

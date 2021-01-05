@@ -4,9 +4,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>新闻资讯</title>
+    <title>新闻资讯-上海斗量文化传媒有限公司</title>
     <meta name="keywords" content="新闻资讯" />
-    <meta name="description" content="新闻资讯" />
+    <meta name="description" content="上海斗量文化传媒有限公司——短视频代运营服务商 , 抖音官方认证 MCN机构，为您整理抖音短视频代运营等相关新闻资讯。" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <script src="./js/flexible.js"></script>
@@ -82,7 +82,6 @@
         </div>
         <!-- 列表 -->
         <ul id="newsLists"></ul>
-        </ul>
         <!-- 分页 -->
         <div style="text-align: center; position: relative; margin-top: 30px">
           <ul id="pageLimit"></ul>
@@ -96,6 +95,31 @@
       <div id="foot"></div>
 	    <div class="mask"><div style="position: absolute;top: 50%;left: 50%;font-size: 16px; color: #dedede";>请求中请稍后...</div></div>
     </div>
+    <div id="mobile">
+      <!-- head -->
+      <div class="head_m clearfix">
+        <a href="/" class="logo_m fl">
+          <img src="./img/mobile/index/6-3.png" alt="m-斗量传媒-logo">
+        </a>
+        <img id="navSlideDown" src="./img/mobile/index/6-2.png" alt="m-6-2.png">
+      </div>
+      <!-- banner -->
+      <div class="banner_m">
+        <img src="./img/mobile/news/banner.png" alt="m-news-banner">
+      </div>
+      <!-- m_main -->
+      <div class="m_body">
+        <div class="m_title">新闻中心</div>
+        <ul id="newsLists_m">
+        </ul>
+        <div class="more_m" onclick="moreNews()">查看更多...</div>
+      </div>
+      <!-- footer_m -->
+      <div id="foot_m"></div>
+    </div>
+    <!-- 移动端导航栏 -->
+    <div id="head_m"></div>
+
     <script>
       let arrlist = []
       $(document).ready(function () {
@@ -121,15 +145,16 @@
               })
               if(!data.resultData.length) {
                 $("#newsLists").append("<p class='no_list'>新闻列表为空</p>");
+                $("#newsLists_m").append("<p class='no_list'>新闻列表为空</p>");
                 $("#paginationSelect").hide()
               }
 
-              let urls = "";
-              window.location.href.indexOf("?") > -1 ? urls = window.location.href
-              .substring(window.location.href.indexOf("?") + 4) : "";
-              if(urls) {
-                detail(urls)
+              var newsId = localStorage.getItem("newsId");
+              if(newsId) {
+                localStorage.removeItem("newsId")
+                detail(newsId)
               }
+              let mList = arrlist.slice(0,4)
                // 生成列表
               for (let i = 0; i < arrlist.length; i++) {
                 let templates = `
@@ -150,6 +175,19 @@
                 </li>
                 `
                 $("#newsLists").append(templates);
+              }
+              for (let i = 0; i < mList.length; i++) {
+                let templates_m = `
+                <li class="clearfix" onclick=detail("${mList[i].id}")>
+                  <div class="m_date">${mList[i].month}</div>
+                  <div class="m_main">
+                    <div class="icon"></div>
+                    <div class="m_head">${mList[i].title}</div>
+                    <div class="m_cont">${repalceHtml(mList[i].content)}</div>
+                  </div>
+                </li>
+                `
+                $("#newsLists_m").append(templates_m);
               }
               var page = 0; // 页数
               // 页数
@@ -286,11 +324,34 @@
         `
         $(".news_detail").append(tep);
       }
+      // 移动端查看更多
+      let index = 4
+      function moreNews() {
+        $("#newsLists_m").empty();
+        index++
+        if(index == arrlist.length) {
+          $(".more_m").css({"background-color":"#e4e4e4","color":"#919191"})
+        }
+       let moreList = arrlist.slice(0,index)
+        for (let i = 0; i < moreList.length; i++) {
+          let templates_m = `
+          <li class="clearfix" onclick=detail("${moreList[i].id}")>
+            <div class="m_date">${moreList[i].month}</div>
+            <div class="m_main">
+              <div class="icon"></div>
+              <div class="m_head">${moreList[i].title}</div>
+              <div class="m_cont">${repalceHtml(moreList[i].content)}</div>
+            </div>
+          </li>
+          `
+          $("#newsLists_m").append(templates_m);
+        }
+      }
 
       // 过滤标签
       function repalceHtml(str){
         var dd=str.replace(/<\/?.+?>/g,"");
-        var dds=dd.replace(/ /g,"");
+        var dds=dd.replace(/    /g, "");
         return dds;
       }
       // img src路径补全

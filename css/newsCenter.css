@@ -206,3 +206,90 @@
   font-size: .1rem /* 20/192 */;
   color: #888;
 }
+
+
+@media screen and (max-width: 750px) {
+  #newsCenter{
+    display: none;
+  }
+  #mobile{
+    display: block;
+  }
+  .banner_m {
+    padding-top: 52.1% /* 391/750; */;
+  }
+  .m_body {
+    padding: .67rem /* 50/75 */ .33rem /* 25/75 */ .8rem /* 60/75 */ .33rem /* 25/75 */;
+  }
+  .m_title {
+    color: #fff;
+    width: 2.4rem /* 180/75 */;
+    height: .87rem /* 65/75 */;
+    line-height: .87rem /* 65/75 */;
+    background-color: #007fff;
+    font-size: .35rem /* 26/75 */;
+  }
+  #newsLists_m li {
+    padding: .4rem /* 30/75 */ 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+  #newsLists_m .m_date {
+    float: left;
+    color: #808080;
+    width: .88rem /* 66/75 */;
+    height: .8rem /* 60/75 */;
+    background-color: #e4e4e4;
+    line-height: .8rem /* 60/75 */;
+    font-size: .24rem /* 18/75 */;
+  }
+  #newsLists_m  .m_main {
+    margin-left: .4rem /* 30/75 */;
+    float: left;
+    width: 84%;
+    position: relative;
+    text-align: left;
+  }
+  #newsLists_m .m_main .icon {
+    width: .39rem /* 29/75 */;
+    height: .39rem /* 29/75 */;
+    background: url(../img/mobile/news/1_05.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: .03rem /* 2/75 */;
+    right: -.19rem /* 14/75 */;
+  }
+  #newsLists_m .m_main .m_head {
+    width: 85%;
+    color: #2874f0;
+    font-size: .35rem /* 26/75 */;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap
+  }
+  #newsLists_m .m_main .m_cont{
+    margin-top: .13rem /* 10/75 */;
+    font-size: .29rem /* 22/75 */;
+    color: #333;
+    line-height: .47rem /* 35/75 */;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .no_list {
+    font-size: .27rem /* 20/75 */;
+    color: #888;
+  }
+  .more_m {
+    color: #fff;
+    margin: 0 auto;
+    font-size: .27rem /* 20/75 */;
+    background-color: rgba(40,116,240, 0.7);
+    height: .6rem /* 45/75 */;
+    line-height: .6rem /* 45/75 */;
+    width: 5.07rem /* 380/75 */;
+    border-radius: .27rem /* 20/75 */;
+    margin-top: .53rem /* 40/75 */;
+    cursor: pointer;
+  }
+}
